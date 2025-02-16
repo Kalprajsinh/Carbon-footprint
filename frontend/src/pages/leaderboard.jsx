@@ -8,7 +8,7 @@ const Leaderboard = () => {
   
     useEffect(() => {
         const fetchData = () => {
-          fetch("http://localhost:3000/alluser")
+          fetch("https://carbon-footprint-wgu4.onrender.com/alluser")
             .then((res) => res.json())
             .then((data) => setUsers(data))
             .catch((err) => console.error("Error fetching data:", err));

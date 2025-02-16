@@ -18,7 +18,7 @@ const Admin = () => {
   };
 
   const confirmDelete = () => {
-    fetch("http://localhost:3000/admin/delete", {
+    fetch("https://carbon-footprint-wgu4.onrender.com/admin/delete", {
       method: "DELETE",
     })
       .then((res) => res.json())

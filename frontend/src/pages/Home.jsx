@@ -6,7 +6,7 @@ export default function Home() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:3000/store", {
+    const response = await fetch("https://carbon-footprint-wgu4.onrender.com/store", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
