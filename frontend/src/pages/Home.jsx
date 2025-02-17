@@ -1,8 +1,19 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 export default function Home() {
   const [name, setName] = useState("");
   const [noOfEmail, setNoOfEmail] = useState("");
+
+  useEffect(() => {
+          const fetchData = () => {
+            fetch("https://carbon-footprint-wgu4.onrender.com/alluser")
+              .then((res) => res.json())
+              .then((data) => setUsers(data))
+              .catch((err) => console.error("Error fetching data:", err));
+          };
+          fetchData();
+          fetchData();
+        }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

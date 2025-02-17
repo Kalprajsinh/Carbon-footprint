@@ -22,7 +22,7 @@ const Leaderboard = () => {
       }, []);
   
     const totalCO2Saved = users.reduce((acc, user) => acc + user.noOfEmail * 4, 0);
-    const maxValue = 5450; 
+    const maxValue = 21000; 
     const percentage = (totalCO2Saved / maxValue) * 100;
     const data = [{ value: percentage }];
 
@@ -35,10 +35,10 @@ const Leaderboard = () => {
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
         
         
-        <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+        <div className="shadow-lg rounded-lg bg-[#fbffff] flex flex-col items-center">
           <h2 className="text-2xl font-semibold">Total Community Impact</h2>
          
-          <div className="flex justify-center">
+          <div className="flex justify-center w-80 sm:w-full">
             <RadialBarChart
               width={400} 
               height={300} 
